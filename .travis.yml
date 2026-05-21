@@ -3,14 +3,14 @@ services:
     - docker
 
 script:
-    - docker build -t mannydesigns/node2 .
-    - docker images mannydesigns/node2
+    - docker build -t randyyele/node2 .
+    - docker images randyyele/node2
 
 before_deploy:
-  - docker login -u <username>  -p <userpassword>
+  - docker login -u randyyele  -p Edvine_yele_26
 
 deploy:
   provider: script
-  script: docker push <dockeruser/nameofproject>
+  script: docker push randyyele/node2
   on:
     branch: master
